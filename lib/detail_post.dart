@@ -17,52 +17,112 @@ class DetailPost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Indonesia'),
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Text(name),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "Positif : " + positif,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+      body: new Column(
+        children: <Widget>[
+          new Center(
+            child: Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Padding(
+                    padding: new EdgeInsets.all(10.0),
+                  ),
+                  new Padding(
+                    padding: new EdgeInsets.all(10.0),
+                  ),
+                  new Text(
+                    "Tracking Covid-19",
+                    style: new TextStyle(
+                        fontSize: 20.0, color: Colors.indigo[900]),
+                  ),
+                  new Row(
+                    children: <Widget>[
+                      new Container(
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                                padding:
+                                    EdgeInsets.all(10)), //Untuk Jarak paragraf
+                            Text(
+                              "Positif : " + positif,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        width: 150,
+                        height: 150,
+                        margin: EdgeInsets.all(15.0),
+                        padding: EdgeInsets.all(20.0),
+                        decoration: BoxDecoration(
+                            color: Colors.blue[100],
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                      new Container(
+                        child: Column(
+                          children: <Widget>[
+                            Padding(padding: EdgeInsets.all(10)),
+                            //Untuk Jarak paragraf
+                            Text(
+                              " Sembuh : " + sembuh,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        width: 150,
+                        height: 150,
+                        margin: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(20.0),
+                        decoration: BoxDecoration(
+                            color: Colors.blue[100],
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                    ],
+                  ),
+                  new Column(
+                    children: <Widget>[
+                      new Container(
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                                padding:
+                                    EdgeInsets.all(10)), //Untuk Jarak paragraf
+                            Text(
+                              "Meninggal : " + meninggal,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        width: 150,
+                        height: 150,
+                        margin: EdgeInsets.all(15.0),
+                        padding: EdgeInsets.all(20.0),
+                        decoration: BoxDecoration(
+                            color: Colors.blue[100],
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              " Sembuh : " + sembuh,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "Meninggal : " + meninggal,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
